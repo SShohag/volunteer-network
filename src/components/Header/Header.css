@@ -1,0 +1,16 @@
+.linkBtn{
+    margin-right: 20px;
+}
+.header{
+    margin-top:20px;
+    margin-right:10px;
+    
+}
+.headerFrom{
+    margin-top: 100px;
+    margin-left: 400px;
+    display: flex;
+}
+.headerFrom input{
+    height: 50px;
+}

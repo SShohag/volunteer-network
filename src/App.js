@@ -3,8 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -12,10 +11,12 @@ import Event from './components/Event/Event';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NoMatch from './components/NoMatch/NoMatch';
+import Donation from './components/Donation/Donation';
+import RegInformation from './components/RegInformation/RegInformation';
 
 export const UserContext = createContext();
 
-function App() {
+function App(props) {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
@@ -31,12 +32,18 @@ function App() {
         <Route path='/login'>
           <Login></Login>
         </Route>
+        <PrivateRoute path='/donation'>
+          <Donation></Donation>
+        </PrivateRoute>
+        <Route path='/reg' >
+          <RegInformation></RegInformation>
+        </Route>
         <Route exact path='/'>
           <Home></Home>
         </Route>
-        {/* <Route path='*'>
+        <Route path='*'>
           <NoMatch></NoMatch>
-        </Route> */}
+        </Route>
       </Switch>
     </Router>
     </UserContext.Provider>

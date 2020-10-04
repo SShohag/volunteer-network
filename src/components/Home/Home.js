@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
-import fakeData from '../../fakeData'
+import React, { useEffect, useState } from 'react';
+// import fakeData from '../../fakeData'
 import Volunteer from '../Volunteer/Volunteer';
 
 const Home = () => {
-    console.log(fakeData)
-    const [volunteers, setVolunteer] = useState(fakeData)
+    // console.log(fakeData)
+    const [volunteers, setVolunteer] = useState([]);
+
+    useEffect(()=> {
+        fetch('http://localhost:8080/volunteers')
+        .then( res => res.json())
+        .then( data => setVolunteer(data))
+    })
+
     return (
         <div className="volunteer">
             {

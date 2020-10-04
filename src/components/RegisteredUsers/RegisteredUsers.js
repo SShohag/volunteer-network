@@ -12,7 +12,6 @@ const RegisteredUsers = () => {
         .then( res => res.json())
         .then( data => setRegUser(data))
     },[])
-    console.log(regUsers)
     return (
         <div>
             {

@@ -2,9 +2,16 @@ import React from "react";
 import './Header.css'
 import logo from '../../logos/mainLogo.png'
 import { Button, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Header = () => {
+  
+  const history=useHistory();
+  const handleUsers = () => {
+    history.push('/volunteerList')
+  }
+
+
   return (
     <div className="header" >
       
@@ -22,7 +29,7 @@ const Header = () => {
         <Nav.Item>
           <Nav.Link className="text-dark" href="/login">Login</Nav.Link>
         </Nav.Item>
-        <Link><Button className="mr-2" variant="primary">Register</Button></Link>
+        <Link><Button onClick={handleUsers} className="mr-2" variant="primary">Register</Button></Link>
         <Link><Button  variant="dark">Admin</Button></Link>
       </Nav>
       <h1 className="d-flex justify-content-center mt-5"> I GROW BY HELPING PEOPLE NEED </h1>

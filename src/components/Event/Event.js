@@ -60,7 +60,7 @@ const Event = () => {
                 <input name="type" defaultValue={type} ref={register({ required: true })} />
                 {errors.type && <span>Type is required</span>}
 
-                <input type="submit" />
+                <input className="submitInput" type="submit" />
             </form>
 
         {/* <form>

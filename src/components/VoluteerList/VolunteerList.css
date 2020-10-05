@@ -1,0 +1,14 @@
+.userList{
+    display: flex;
+    margin-left:160px;
+    list-style: none;
+    padding: 20px;
+    border: 1px solid gray;
+    width: 75%;
+}
+.volunteerList img{
+height: 80px;
+}
+.userList img{
+height: 50px;
+}

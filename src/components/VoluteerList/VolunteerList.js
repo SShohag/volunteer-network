@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const VolunteerList = () => {
     const [volunteers, setVolunteers] = useState([]);
     useEffect (() => {
-        fetch('http://localhost:8080/registeredUser')
+        fetch('https://secure-sierra-97591.herokuapp.com/registeredUser')
         .then(res => res.json())
         .then( data => setVolunteers(data))
     },[] )

@@ -3,7 +3,7 @@ import fakeData from '../../fakeData'
 
 const Donation = () => {
     const handleAddVolunteer = () => {
-        fetch('http://localhost:8080/addVolunteer', {
+        fetch('https://secure-sierra-97591.herokuapp.com/addVolunteer', {
             method: 'POST',
             headers:{ 
                 'Content-type':'application/json'

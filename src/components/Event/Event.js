@@ -21,7 +21,7 @@ const Event = () => {
       console.log('from submitted', data);
       const registrationDetails = {details:data, registrationTime:new Date()};
 
-      fetch('http://localhost:8080/addRegistration', {
+      fetch('https://secure-sierra-97591.herokuapp.com/addRegistration', {
           method: 'POST',
           headers:{
               "Content-Type":"application/json"
@@ -63,20 +63,6 @@ const Event = () => {
                 <input className="submitInput" type="submit" />
             </form>
 
-        {/* <form>
-                    <input type="text" value={loggedInUser.name} placeholder="Full Name"/>
-                    <br/>
-                    <input type="text" value={loggedInUser.email} placeholder="Username or email"/>
-                    <br/>
-                    <DatePicker selected={startDate} onChange={date =>setStartDate(date)}/>
-                    <br/>
-                    <input type="text" placeholder="Description"/>
-                    <br/>
-                    <input type="text" value={type} />
-                    <br/>
-                    <br/>
-                    <Link><button className="btn btn-primary w-100" type="submit">Registration</button></Link>
-                </form> */}
       </div>
     </div>
   );
